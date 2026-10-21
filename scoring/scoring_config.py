@@ -1,5 +1,5 @@
 """
-scoring_config.py  (v2 — ANEM real data)
+scoring_config.py  (v2 — real data)
 -----------------------------------------
 Single source of truth for all scoring matrices, strategy weights,
 and thresholds. All values come directly from Apparaiment-Strategy.xlsx.

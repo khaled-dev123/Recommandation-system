@@ -1,5 +1,5 @@
 """
-scoring_engine.py  (v2 — ANEM criteria C1–C6)
+scoring_engine.py  (v2 — placement criteria C1–C6)
 ----------------------------------------------
 Stateless scoring functions. No MongoDB, no I/O.
 Takes plain dicts, returns floats.

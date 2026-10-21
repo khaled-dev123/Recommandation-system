@@ -1,6 +1,6 @@
 
 """
-score_profiles.py  (v2 — ANEM criteria)
+score_profiles.py  (v2 — placement criteria)
 ----------------------------------------
 Scores standalone candidate profiles from the `profiles` collection.
 These are synthetic profiles from generate_data.py (or manually created ones).
@@ -46,7 +46,7 @@ def profile_to_record(profile: dict, best_offer: dict = None) -> dict:
     skl   = profile.get("skills", {})
     pers  = profile.get("personal", {})
 
-    # Map Bac-system levels → ANEM NI categories
+    # Map Bac-system levels → NI categories
     bac_to_ni = {
         "Bac":      "Secondaire 3AS",
         "Bac+2":    "Supérieur 1",

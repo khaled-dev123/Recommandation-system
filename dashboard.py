@@ -1,5 +1,5 @@
 """
-dashboard.py — ANEM Intelligent Job Recommender
+dashboard.py — Intelligent Job Recommender
 ------------------------------------------------
 Two modes:
   👤 Candidat  — upload CV or fill form → top-N best matching offers (MMR reranked)
@@ -29,7 +29,7 @@ from scoring.scoring_config import get_normalized_weights
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="ANEM — Recommandation Intelligente",
+    page_title="Recommandation Intelligente",
     page_icon="🎯",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -418,7 +418,7 @@ with st.sidebar:
     st.markdown("""
     <div style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;
                 color:#dce8f8;margin-bottom:1.2rem;letter-spacing:-0.01em;">
-        🎯 ANEM Recommandation
+        🎯 Recommandation
     </div>
     """, unsafe_allow_html=True)
 
@@ -772,6 +772,6 @@ else:
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("---")
 st.caption(
-    f"Modèle ML (Logistic Regression) · {total_samples:,} placements réels ANEM · "
+    f"Modèle ML (Logistic Regression) · {total_samples:,} placements réels · "
     f"Diversité MMR (λ={lambda_:.2f}) · Scoring C1–C6 avec correspondance floue (thefuzz)"
 )

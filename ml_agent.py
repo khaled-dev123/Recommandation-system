@@ -231,7 +231,7 @@ def print_score_result(result: dict) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        description="ML agent for ANEM employability scoring",
+        description="ML agent for employability scoring",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     p.add_argument("--train",        action="store_true",

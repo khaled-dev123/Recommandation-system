@@ -1,12 +1,12 @@
-# 🎯 ANEM — Intelligent Job & Candidate Recommendation System
+# 🎯 Intelligent Job & Candidate Recommendation System
 
-**A hybrid ML-powered recommendation engine for the Algerian National Employment Agency (ANEM)** — it matches job-seekers with job offers, and employers with candidates, using 6 expert scoring criteria refined by a Logistic-Regression model trained on **37,358 real placement records**.
+**A hybrid ML-powered recommendation engine for employment platforms** — it matches job-seekers with job offers, and employers with candidates, using 6 expert scoring criteria refined by a Logistic-Regression model trained on **37,358 real placement records**.
 
 ---
 
 ## ✨ Overview
 
-This project solves a doubly constrained matching problem found in national employment agencies:
+This project solves a doubly constrained matching problem found in public employment services:
 
 | Direction | Question it answers |
 |---|---|
@@ -16,7 +16,7 @@ This project solves a doubly constrained matching problem found in national empl
 The system is **not** a classical collaborative-filtering recommender. It is a **content-based, multi-criteria matching engine**:
 
 - Every candidate ↔ offer pair is scored on **6 expert criteria (C1–C6)** using decision matrices and fuzzy string matching.
-- The criterion weights are **automatically re-tuned by a Machine Learning agent** (one Logistic Regression per candidate strategy, trained on real ANEM placement data).
+- The criterion weights are **automatically re-tuned by a Machine Learning agent** (one Logistic Regression per candidate strategy, trained on real placement data).
 - Final rankings are diversified with an **MMR (Maximal Marginal Relevance)** reranker so users get varied, non-redundant results.
 
 ---
@@ -104,7 +104,7 @@ Six criteria are computed per candidate–offer pair, each in `[0, 1]`:
 | **C2** | Diplômes | `thefuzz` token-set similarity on diploma strings |
 | **C3** | Expériences | Years-band matrix **×** job-title proximity |
 | **C4** | Langues | Neutral 1.0 (no language data in dataset) |
-| **C5** | Ancienneté d'inscription | Banded seniority function (ANEM priority rule) |
+| **C5** | Ancienneté d'inscription | Banded seniority function (registration priority rule) |
 | **C6** | Résidence | 3 mobility scopes: same commune / same wilaya / other |
 
 The final **Employability Score (TE)** is a normalized weighted average:
@@ -247,4 +247,4 @@ Stored in `ml_weight_cache.json` and upserted into the Mongo `referential` colle
 ## 📄 License & context
 
 Academic / Master's research project — Recommendation Systems.
-Built on anonymised ANEM placement data held in MongoDB Atlas.
+Built on anonymised placement data held in MongoDB Atlas.
